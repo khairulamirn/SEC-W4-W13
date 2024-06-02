@@ -2,18 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-body {
+  }
+  
+  body {
     font-family: monospace;
     background-color: #f1f1f1;
-}
-
-header {
+  }
+  
+  header {
     background-color: black;
     color: white;
     padding: 10px;
@@ -21,44 +21,44 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-header > h1 {
+  }
+  
+  header h1 {
     font-size: 1.5em;
-}
-
-header > nav > ul {
+  }
+  
+  header > nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     gap: 16px;
     list-style: none;
-}
-
-header > nav > ul > li > a {
+  }
+  
+  header > nav > ul > li > a {
     all: unset;
-    cursor: pointer;
     color: white;
+    cursor: pointer;
     transition: all 0.3s;
-}
-
-header > nav > ul > li > a:hover {
+  }
+  
+  header > nav > ul > li > a:hover {
     color: yellow;
-}
-
-section {
+  }
+  
+  section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 300px;
-    gap: 16px   ;
+    gap: 16px;
     padding: 16px;
     border-bottom: 1px solid #ccc;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: black;
     color: white;
     padding: 10px;
@@ -66,73 +66,78 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-i.bi {
+  }
+  
+  i.bi {
     font-size: 24px;
     cursor: pointer;
-}
-
-i#menuIcon {
+  }
+  
+  i#menuIcon {
     display: none;
-} 
-
-div#sidebar {
+  }
+  
+  div#sidebarBackground {
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    height: 100vh;
+  }
+  
+  div#sidebar {
     /* display: none; */
     background-color: yellow;
     position: fixed;
-    width: 200px;
-    height: 100vh;
     top: 0;
     right: -200px;
     width: 200px;
     height: 100vh;
     padding: 16px;
     transition: all 0.2s;
-}
-
-div#sidebar > div {
+  }
+  
+  div#sidebar > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
     border-bottom: 1px solid black;
-}
-
-div#sidebar > div > h1 {
+  }
+  
+  div#sidebar > div > h1 {
     font-size: 1.5em;
-}
-
-div#sidebar > ul {
+  }
+  
+  div#sidebar > ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     gap: 16px;
     list-style: none;
-    padding: 16px;
     margin-top: 16px;
-}
-
-div#sidebar > ul > li > a {
+  }
+  
+  div#sidebar > ul > li > a {
     all: unset;
     color: black;
     cursor: pointer;
     transition: all 0.3s;
-}
+  }
   
   div#sidebar > ul > li > a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 450px) {
+  }
+  
+  @media (max-width: 700px) {
     i#menuIcon {
-        display: block
+      display: block;
     }
-
+  
     header > nav > ul {
-        display: none;
+      display: none;
     }
-
-} 
+  } 
