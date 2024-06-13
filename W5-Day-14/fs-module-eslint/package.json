@@ -1,0 +1,17 @@
+{
+  "name": "core-module",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "continuation of core module lesson",
+  "main": "index.cjs",
+  "scripts": {
+    "dev": "node --watch index.cjs",
+    "start": "node index.cjs",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.4.0"
+  },
+  "author": "khairulamirn",
+  "license": "ISC"
+}

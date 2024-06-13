@@ -1,0 +1,1 @@
+Hello world, this is a note produced by the core-module fs in node.js
