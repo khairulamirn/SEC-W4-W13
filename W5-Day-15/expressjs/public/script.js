@@ -1,0 +1,1 @@
+console.log('Hye this is JavaScript');

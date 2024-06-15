@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 3%;
+    text-align: center;
+}
+
+nav {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header > nav > ul {
+    padding: 15px;
+}
