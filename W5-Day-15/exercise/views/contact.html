@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khairulamirin-Contact</title>
+    <script src="script.js" defer></script>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navContainer">
+        <nav class="nav-bar">
+            <!-- nightmode -->
+            <i id="modeToggle" class="bi bi-moon-stars-fill"></i>
+            <!-- logo and nav menu -->
+            <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+            <a style="margin-left: 5%;" href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects-skills">Projects</a>
+            <a href="/projects-skills">Skills</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <!-- header for mobile responsive -->
+        <img style="width: 40px; height: 40px; border-radius: 50%; margin-top: 1%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+        <i id="listMenu" class="bi bi-list"></i>
+    </header>
+    <!-- sidebar for mobile responsive -->
+    <header id="sidebarBackground">
+        <div id="sidebar">
+            <div>
+                <img style="width: 40px; height: 40px; border-radius: 50%; margin-bottom: 4%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+                <i id="xIcon" class="bi bi-x"></i>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects-skills">Projects</a></li>
+                <li><a href="/projects-skills">Skills</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="contact" style="margin: 2% auto 0 auto;">
+        <h1><span style="color: #82d0e6;">Connect</span> with me</h1>
+        <!-- send email -->
+        <div id="emailContainer">
+            <form action="https://api.web3forms.com/submit" method="POST" id="emailBox">
+                <input type="hidden" name="access_key" value="4a61d205-11d1-428f-a94e-aae9ec89ce83">
+                <input type="text" name="name" id="contactInput1" placeholder="Your Name" required>
+                <input type="email" name="email" id="contactInput2" placeholder="Your Email" required>
+                <textarea name="message" id="contactInput3" placeholder="Your Message" required></textarea>
+                <button type="submit" id="emailButton">Submit <i class="bi bi-arrow-right"></i></button>
+            </form>
+        </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+        <div id="socialMedia">
+            <div class="instagram">
+                <img src="assets/instagram.png" alt="instagram">
+                <h3>Instagram <p>@khairulamirn</p></h3>
+            </div>
+            <div class="linkedin">
+                <img src="assets/linkedin.png" alt="linkedin">
+                <h3>LinkedIn <p>Khairulamirin Lamin</p></h3>
+            </div>
+            <div class="github">
+                <img src="assets/github.png" alt="github">
+                <h3>GitHub <p>@khairulamirn</p></h3>
+            </div>
+            <div class="gmail">
+                <img src="assets/gmail.png" alt="gmail">
+                <h3>Gmail <p>khairulamirn.lamin@gmail.com</p></h3>
+            </div>
+        </div>
+        <img src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+        <!-- copyright -->
+        <p>© Khairulamirin 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>

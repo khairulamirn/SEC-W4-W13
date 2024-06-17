@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mulish', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6em;
+}
+
+body {
+    background-color: #ffffff;
+    color: black;
+}
+
+h1 {
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 370;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 450;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* btnToTop STYLE */
+#scroll > #btnToTop {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 50%;
+    border: none;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #a2e4ec;
+}
+
+/* NAVCONTAINER STYLE */
+#navContainer {
+    width: 55%;
+    margin: 0 auto;
+    position: sticky;
+    top: 2.5%;
+    border-radius: 10px;
+    z-index: 999;
+    background-color: #e6e2e2;
+}
+#navContainer > .nav-bar > i {
+    margin-left: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#navContainer > .nav-bar > img {
+    display: block;
+    margin: 0 70px 0 130px;
+}
+#navContainer > img {
+    display: none;
+}
+#navContainer > i#listMenu {
+    display: none;
+    margin-top: 1%;
+    font-size: 30px;
+}
+#navContainer > .nav-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+#navContainer > .nav-bar > a {
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #408da9;
+}
+#navContainer > .nav-bar > a:hover {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: #00a0dc;
+}
+
+/* SIDEBARBACKGROUND STYLE */
+#sidebarBackground {
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    height: 100vh;
+}
+
+/* SIDEBAR STYLE */
+#sidebar {
+    display: none;
+    padding-bottom: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    transition: all 0.4s;
+    border-bottom: 1px solid rgb(247, 238, 238);
+    background-color: white;
+    z-index: 999;
+}
+#sidebar > div {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid black;
+}
+#sidebar > div i {
+    font-size: 25px;
+}
+#sidebar > ul {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#sidebar > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 16px;
+    margin-top: 16px;
+}
+#sidebar > ul > li > a {
+    all: unset;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#sidebar > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+/* HERO STYLE */
+#hero {
+    width: 90%;
+    margin: 7% auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    scroll-margin-top: 15em;
+    text-align: left;
+}
+#hero > img {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+#hero > #heroText > h3 {
+    margin-top: 15px;
+}
+#hero > #heroText > h1 {
+    margin-top: 10px;
+}
+#hero > #heroText > p {
+    margin-top: 30px;
+}
+
+/* ABOUT STYLE */
+#about {
+    margin: 20% auto 0 auto;
+    width: 90%;
+}
+#about h1 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+#about > #box {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+#about > #box > .text > p {
+    line-height: 35px;
+}
+#about > #box > .text > #insideBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+}
+#about > #box > .text > #insideBox > div {
+    height: 300px;
+    margin-top: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #e9f2f5;
+}
+#about > #box > .text > #insideBox > div h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(112, 81, 81);
+}
+#about > #box > .text > #insideBox > .experience > div > ul li {
+    padding-top: 5px;
+    list-style: none;
+}
+#about > #box > .img img {
+    width: 75%;
+    height: 90%;
+    margin-left: 12.5%;
+    border-radius: 20px;
+}
+
+/* PROJECTS STYLE */
+#projects {
+    width: 50%;
+    margin: 5% auto 0 auto;
+}
+#projects > h1 {
+    margin-bottom: 10%;
+    text-align: center;
+}
+#projects > #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+}
+/* Common styles for all projects div */
+#projects > #container > #left > div,
+#projects > #container > #right > div {
+    width: 400px;
+    margin-top: 5%;
+    padding: 45px 30px;
+    border-radius: 30px;
+    background-color: #f3f1f1;
+    background-size: 270px;
+    background-position: center;
+    background-position-y: 200px;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease-in-out;
+}
+#projects > #container > #left .left-one,
+#projects > #container > #right .right-two {
+    height: 600px;
+}
+#projects > #container > div h3 {
+    margin-bottom: 7%;
+}
+#projects > #container > div button {
+    margin: 10px 0 0 120px;
+    padding: 5px;   
+    cursor: pointer;
+    color: #00a0dc;
+    border-radius: 20px;
+    border-color: #5abff5;
+}
+/* Specific background images and positions */
+#projects > #container > #left > .left-one {
+    background-image: url(assets/pacman.png);
+    background-position-y: 200px;
+}
+#projects > #container > #left > .left-two {
+    background-image: url(assets/taskapp.png);
+    background-position-y: 200px;
+}
+#projects > #container > #right > .right-one {
+    background-image: url(assets/quotegenerator.png);
+    background-position-y: 200px;
+}
+#projects > #container > #right > .right-two {
+    background-image: url(assets/passwordgenerator.png);
+    background-position-y: 230px;
+}
+
+/* SKILLS STYLE */
+#skills {
+    width: 80%;
+    margin: 10% auto;
+    scroll-margin-top: 9em;
+}
+#skills h1 {
+    margin-bottom: 10%;
+    text-align: center;
+}
+#skills > #logoSkills {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+#skills > #logoSkills > img {
+    width: 70px;
+    height: 70px;
+}
+#skills > #skillContainer .skill {
+    margin: 50px 0;
+}
+#skills > #skillContainer > .skill > .skill-name {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#skills > #skillContainer > .skill > .skill-bar {
+    width: 100%;
+    background-color: gray;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#skills > #skillContainer > .skill > .skill-bar > .skill-level {
+    height: 100%;
+    background-color: orange;
+}
+
+/* CONTACT STYLE */
+#contact {
+    width: 90%;
+    margin: 0 auto;
+}
+#contact h1 {
+    padding-top: 1%;
+    text-align: center;
+}
+#contact > #emailContainer {
+    width: 40%;
+    height: 430px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #f3f1f1;
+}
+#contact > #emailContainer > #emailBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#contactInput1, #contactInput2, #contactInput3 {
+    width: 500px;
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-weight: 400;
+    background-color: #ffffff;
+}
+#contact > #emailContainer > #emailBox > textarea {
+    height: 140px;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+#contact > #emailContainer > #emailBox > button {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #00a0dc;
+    border-color: #5abff5;
+}
+
+/* FOOTER SECTION */
+footer {
+    width: 100%;
+    height: 400px;
+    margin-top: 10%;
+    text-align: center;
+    background-color: #e6e2e2;
+}
+footer > #socialMedia {
+    padding-top: 2.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer > #socialMedia > div {
+    width: 21%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    border: 0;
+    border-radius: 20px;
+    outline: 0;
+    cursor: pointer;
+    background: #f3f1f1;
+}
+footer > #socialMedia > div:hover {
+    color: white;
+}
+footer > #socialMedia > div.instagram:hover {
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+footer > #socialMedia > div.linkedin:hover {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+footer > #socialMedia > div.github:hover {
+    background: linear-gradient(90deg, #24292e,#2b3137);
+}
+footer > #socialMedia > div.gmail:hover {
+    background: linear-gradient(90deg, #ff4343, #ff5d5d, #b9b5b5);
+}
+footer > #socialMedia > div > img {
+    width: 50px;
+    height: 50px;
+    margin: 17px 0 20px 15px;
+}
+footer > #socialMedia > div > h3 {
+    height: 30px;
+    margin: 20px 0 0 10px;
+}
+footer > #socialMedia > div > h3 p {
+    font-size: 17px;
+}
+/* logo */
+footer > img {
+    margin-top: 70px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+}
+/* copyright */
+footer > p {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 470px) {
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    #scroll > #btnToTop {
+        display: block;
+    }
+
+    /* NAVCONTAINER STYLE */
+    #navContainer {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        gap: 70%;
+        position: unset;
+        top: 0;
+        border-radius: 0;
+        background-color: #eae9e9;
+        z-index: 1;
+    }
+    #navContainer > img {
+        display: block;
+    }
+    #navContainer > i#listMenu {
+        display: inline-block;
+    }
+    #navContainer > .nav-bar{
+        display: none;
+    }
+
+    /* SIDEBAR STYLE */
+    #sidebar {
+        display: block; 
+    }
+    
+    /* HERO STYLE */
+    #hero {
+        width: 90%;
+        margin: 12% auto 0 auto;
+        flex-direction: column-reverse;
+        gap: 2%;
+        scroll-margin-top: 15em;
+        text-align: center;
+    }
+    #hero > img {
+        width: 175px;
+        height: 200px;
+    }
+    #hero > #heroText > h3 {
+        margin-top: 20px;
+    }
+    #hero > #heroText > h1 {
+        margin-top: 15px;
+    }
+    #hero > #heroText > p {
+        margin-top: 20px;
+    }
+
+    /* ABOUT STYLE */
+    #about > #box {
+        flex-direction: column;
+    }
+    #about > #box > .text > p {
+        line-height: 27px;
+    }
+    #about > #box > .text > #insideBox {
+        flex-direction: column;
+    }
+    #about > #box > .text > #insideBox > div {
+        height: 250px;
+        margin-top: 20px;
+    }
+    #about > #box > .text > #insideBox > .experience > div > ul li {
+        padding-top: 5px;
+        list-style: none;
+        font-size: 13px;
+    }
+    #about > #box > .img img {
+        display: none;
+        width: 250px;
+        height: 50%;
+        border-radius: 20px;
+    }
+
+    /* PROJECTS STYLE */
+    #projects {
+        width: 50%;
+        margin: 10% auto 0 auto;
+    }
+    #projects > #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2%;
+    }
+    #projects > #container > #left > div,
+    #projects > #container > #right > div {
+        margin-top: 5%;
+        width: 200px;
+        background-size: 180px;
+    }
+    #projects > #container > #left .left-one,
+    #projects > #container > #right .right-two {
+        height: 460px;
+    }
+    #projects > #container > div button {
+        width: 90px;
+        height: 30px;
+        margin: 10px 0 0 20px;
+        padding: 5px;   
+        font-size: 13px;
+    }
+    
+    /* SKILLS STYLE */
+    #skills {
+        width: 80%;
+        margin: 15% auto;
+    }
+    #skills > #logoSkills > img {
+        width: 40px;
+        height: 40px;
+    }
+    #skills > #skillContainer > .skill > .skill-name {
+        margin-bottom: 15px;
+        display: flex;  
+        justify-content: space-between;
+        font-size: 13px;
+    }
+
+    /* CONTACT STYLE */
+    #contact > #emailContainer {
+        width: 90%;
+    }
+    #contactInput1, #contactInput2, #contactInput3 {
+        width: 300px;
+        height: 40px;
+    }
+    #contact > #emailContainer > #emailBox > button {
+        width: 100px;
+        height: 35px;
+    }
+    
+    /* FOOTER STYLE */
+    footer {
+        height: 410px;
+    }
+    footer > img {
+        width: 50px; 
+        height: 50px; 
+        margin-top: 40px;
+    }
+    footer > #socialMedia {
+        height: 270px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer > #socialMedia > div {
+        width: 50%;
+        height: 55px;
+        margin-top: 3%;
+    }
+    footer > #socialMedia > div > img {
+        width: 20px;
+        height: 20px;
+    }
+    footer > #socialMedia > div > h3 {
+        height: 30px;
+        margin: 9px 0 0 10px;
+        font-size: 0.9rem;
+    }
+    footer > #socialMedia > div > h3 p {
+        font-size: 11.8px;
+    }
+    footer > p {
+        margin: 10px auto;
+    }
+}
