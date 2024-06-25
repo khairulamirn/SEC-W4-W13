@@ -1,0 +1,17 @@
+{
+  "name": "express-w6-day16",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --wathch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "khairulamirin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
