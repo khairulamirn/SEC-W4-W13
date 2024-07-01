@@ -1,4 +1,5 @@
 -- POSTGRES SQL QUERIES
+-- there is no undo or redo in database
 
 -- query time now 
 SELECT NOW();
@@ -16,14 +17,16 @@ SELECT current_user;
 -- id is a serial type, primary key
 -- username and email are unique
 CREATE TABLE users (
-    id serial PRIMARY KEY,
-    username varchar(255) UNIQUE,
+    id serial PRIMARY KEY, -- the function of primary key is to make sure that each row has a unique value
+    username varchar(255) UNIQUE, -- 255 is the max length of character
     email varchar(255) UNIQUE,
     password varchar(255),
     created_at timestamp DEFAULT NOW()
 );
 
 -- create user table with id uuid
+-- uuid is a universally unique identifier
+-- example of uuid is 5b1b9b9a-0a0a-0a0a-0a0a-0a0a0a0a0a0a
 CREATE TABLE users_uuid (
     id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     username varchar(255) UNIQUE,
@@ -31,6 +34,7 @@ CREATE TABLE users_uuid (
     password varchar(255),
     created_at timestamp DEFAULT NOW()
 );
+
 -- before running the above query, you need to install the uuid-ossp extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -57,16 +61,22 @@ SELECT * FROM users;
 -- list all user only id, username, and email
 SELECT id, username, email FROM users;
 
--- list users with spcific email
-SELECT * FROM users WHERE email = 'zahin@mail.com';
+-- list users with spcific parameter
+SELECT * FROM users WHERE email = 'zahinzul@mail.com';
+SELECT * FROM users WHERE id = 1;
 
 -- update username of user with id 1
 UPDATE users SET username = 'zahin' WHERE id = 1;
+
+-- update created_at
+UPDATE users SET created_at = NOW();
 
 -- delete user with id 1
 DELETE FROM users WHERE id = 1;
 
 -- delete users rows and reset the serial id
+-- TRUNCATE is used to delete all rows
+-- RESTART IDENTITY is used to reset the serial id
 TRUNCATE users RESTART IDENTITY;
 
 -- count the number of users
