@@ -123,11 +123,11 @@ async function loginUser(req, res) {
             email: user.email,
         };
 
-        const configJWT = {
-            expiresIn: "1h",
-        };
+        // const configJWT = {
+        //     expiresIn: "1h",
+        // };
 
-        const token = jwt.sign(tokenData, process.env.JWT_SECRET, configJWT);
+        const token = jwt.sign(tokenData, process.env.JWT_SECRET);
 
         const resData = {
             message : "User logged in successfully",
